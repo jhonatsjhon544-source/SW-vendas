@@ -3,96 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SW Vendas - Termos de Serviço e Política de Privacidade</title>
+    <title>SW Vendas - Termos e Política</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
-        /* Paleta de cores ROXA profissional */
         :root {
-            --primaria: #722ED1;      /* Roxo principal */
-            --escura: #2D1B69;        /* Roxo escuro */
-            --clara: #F7F5FF;         /* Fundo roxo claro */
-            --texto: #333344;
-            --branco: #ffffff;
-            --sombra: rgba(114, 46, 209, 0.15);
+            --primaria: #7B2FFD;       /* Roxo vibrante moderno */
+            --escuro: #1A1035;         /* Roxo escuro */
+            --claro: #F9F7FF;          /* Fundo claro */
+            --destaque: #A855F7;       /* Roxo brilhante */
+            --texto: #2D2A3E;
+            --branco: #FFFFFF;
+            --sombra: 0 8px 32px rgba(123, 47, 253, 0.12);
+            --borda: rgba(123, 47, 253, 0.1);
         }
 
         body {
-            background-color: var(--clara);
+            background: linear-gradient(180deg, var(--claro) 0%, #FFFFFF 100%);
             color: var(--texto);
             line-height: 1.7;
-            padding-top: 0;
+            min-height: 100vh;
         }
 
-        /* Cabeçalho com efeito gradiente */
+        /* Cabeçalho no estilo moderno */
         .cabecalho {
-            background: linear-gradient(135deg, var(--primaria), var(--escura));
+            background: linear-gradient(135deg, var(--primaria) 0%, var(--destaque) 100%);
             color: var(--branco);
-            padding: 2.5rem 1rem;
+            padding: 4rem 1.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .cabecalho::before {
+        .cabecalho::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-            animation: brilho 6s infinite linear;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            top: -50%;
+            left: -50%;
+            animation: flutuar 12s infinite ease-in-out;
         }
 
-        @keyframes brilho {
-            0% { left: -100%; }
-            100% { left: 100%; }
+        @keyframes flutuar {
+            0% { transform: translate(0,0); }
+            50% { transform: translate(30px, -20px); }
+            100% { transform: translate(0,0); }
         }
 
         .cabecalho h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
             position: relative;
             z-index: 1;
+            letter-spacing: -0.5px;
         }
 
         .cabecalho p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.95;
             position: relative;
             z-index: 1;
         }
 
-        /* Menu 100% roxo com efeito */
+        /* Navegação clean */
         .navegacao {
-            background-color: var(--primaria);
+            background: var(--branco);
+            box-shadow: var(--sombra);
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 12px var(--sombra);
+            z-index: 999;
+            border-bottom: 1px solid var(--borda);
         }
 
         .navegacao ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 3rem;
             flex-wrap: wrap;
-            padding: 1rem;
+            padding: 1.2rem;
         }
 
         .navegacao a {
-            color: var(--branco);
-            font-weight: 600;
+            color: var(--primaria);
+            font-weight: 700;
+            font-size: 1.1rem;
             text-decoration: none;
-            font-size: 1.05rem;
-            padding: 0.5rem 0;
             position: relative;
             transition: all 0.3s ease;
         }
@@ -100,79 +105,93 @@
         .navegacao a::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -8px;
             left: 0;
             width: 0;
-            height: 2px;
-            background-color: var(--branco);
+            height: 3px;
+            background: var(--primaria);
+            border-radius: 2px;
             transition: width 0.3s ease;
         }
 
         .navegacao a:hover {
-            transform: translateY(-2px);
+            color: var(--destaque);
         }
 
         .navegacao a:hover::after {
             width: 100%;
         }
 
+        /* Conteúdo com caixas premium */
         .conteudo {
-            max-width: 850px;
-            margin: 2.5rem auto;
-            padding: 0 1.2rem;
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
         }
 
-        /* Caixas com efeito de elevação */
         .secao {
-            background-color: var(--branco);
-            padding: 2.2rem;
-            margin-bottom: 2.2rem;
-            border-radius: 14px;
-            box-shadow: 0 4px 20px var(--sombra);
-            border-left: 5px solid var(--primaria);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--branco);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--sombra);
+            border-left: 6px solid var(--primaria);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .secao:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px var(--sombra);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(123, 47, 253, 0.18);
         }
 
         .secao h2 {
             color: var(--primaria);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.6rem;
-            border-bottom: 2px solid var(--primaria);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--borda);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .secao h2::before {
+            content: '';
+            width: 8px;
+            height: 1.8rem;
+            background: var(--primaria);
+            border-radius: 4px;
         }
 
         .secao p {
-            margin-bottom: 1.1rem;
-            font-size: 1.08rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
             line-height: 1.8;
+            color: var(--texto);
         }
 
-        /* Rodapé roxo escuro */
+        /* Rodapé elegante */
         .rodape {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--escura);
+            background: var(--escuro);
             color: var(--branco);
-            font-size: 0.95rem;
-            margin-top: 1rem;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
         }
 
         .rodape p {
             margin-bottom: 0.5rem;
-            opacity: 0.85;
+            opacity: 0.8;
+            font-size: 0.95rem;
         }
 
         /* Ajustes para celular */
         @media (max-width: 600px) {
-            .navegacao ul { gap: 1.2rem; }
-            .secao { padding: 1.6rem; }
-            .cabecalho h1 { font-size: 1.7rem; }
-            .secao h2 { font-size: 1.3rem; }
+            .cabecalho h1 { font-size: 2rem; }
+            .navegacao ul { gap: 1.5rem; }
+            .secao { padding: 1.8rem; }
+            .secao h2 { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -191,27 +210,18 @@
     </nav>
 
     <main class="conteudo">
-        <!-- TERMOS DE SERVIÇO -->
         <section id="termos" class="secao">
             <h2>SW Vendas - Termos de Serviço</h2>
-
             <p>Ao utilizar o SW Vendas, você concorda em usar o bot de forma legal e respeitando as regras do Discord.</p>
-
             <p>É proibido utilizar o bot para fraudes, golpes ou qualquer atividade ilegal.</p>
-
             <p>Os administradores do SW Vendas podem alterar ou descontinuar recursos a qualquer momento.</p>
-
             <p>O uso do bot é por sua conta e risco.</p>
         </section>
 
-        <!-- POLÍTICA DE PRIVACIDADE -->
         <section id="privacidade" class="secao">
             <h2>SW Vendas - Política de Privacidade</h2>
-
             <p>O SW Vendas pode armazenar dados necessários para seu funcionamento, como IDs de servidores, canais, cargos, usuários e configurações.</p>
-
             <p>Nenhuma informação é vendida a terceiros.</p>
-
             <p>Os dados são utilizados apenas para o funcionamento do bot e podem ser removidos mediante solicitação do proprietário do servidor.</p>
         </section>
     </main>
