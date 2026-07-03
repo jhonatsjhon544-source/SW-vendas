@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW Vendas - Termos de Serviço e Política de Privacidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        :root {
+            --primaria: #5865F2;
+            --escura: #1e1f22;
+            --fundo: #f8f9fa;
+            --texto: #333;
+            --clara: #ffffff;
+            --borda: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--fundo);
+            color: var(--texto);
+            line-height: 1.7;
+        }
+
+        .cabecalho {
+            background-color: var(--primaria);
+            color: var(--clara);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .cabecalho h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .navegacao {
+            background-color: var(--clara);
+            border-bottom: 1px solid var(--borda);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navegacao ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .navegacao a {
+            color: var(--primaria);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .navegacao a:hover {
+            color: var(--escura);
+        }
+
+        .conteudo {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .secao {
+            background-color: var(--clara);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .secao h2 {
+            color: var(--primaria);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primaria);
+            font-size: 1.4rem;
+        }
+
+        .secao p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .rodape {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: var(--escura);
+            color: var(--clara);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .navegacao ul { gap: 1rem; }
+            .secao { padding: 1.5rem; }
+            .cabecalho h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>🤖 SW Vendas</h1>
+        <p>Bot de Discord</p>
+    </header>
+
+    <nav class="navegacao">
+        <ul>
+            <li><a href="#termos">Termos de Serviço</a></li>
+            <li><a href="#privacidade">Política de Privacidade</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <!-- TERMOS DE SERVIÇO -->
+        <section id="termos" class="secao">
+            <h2>SW Vendas - Termos de Serviço</h2>
+
+            <p>Ao utilizar o SW Vendas, você concorda em usar o bot de forma legal e respeitando as regras do Discord.</p>
+
+            <p>É proibido utilizar o bot para fraudes, golpes ou qualquer atividade ilegal.</p>
+
+            <p>Os administradores do SW Vendas podem alterar ou descontinuar recursos a qualquer momento.</p>
+
+            <p>O uso do bot é por sua conta e risco.</p>
+        </section>
+
+        <!-- POLÍTICA DE PRIVACIDADE -->
+        <section id="privacidade" class="secao">
+            <h2>SW Vendas - Política de Privacidade</h2>
+
+            <p>O SW Vendas pode armazenar dados necessários para seu funcionamento, como IDs de servidores, canais, cargos, usuários e configurações.</p>
+
+            <p>Nenhuma informação é vendida a terceiros.</p>
+
+            <p>Os dados são utilizados apenas para o funcionamento do bot e podem ser removidos mediante solicitação do proprietário do servidor.</p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 SW Vendas. Todos os direitos reservados.</p>
+        <p>Bot independente, não afiliado à Discord Inc.</p>
+    </footer>
+
+</body>
+</html>
